@@ -4,7 +4,7 @@
       {{ storeCounter.count }}
     </div> -->
     <Counter/>
-    <div>Double Count Computed: {{ multipleCount }}</div>
+    <div>Double Count Computed: {{ doubleCount }}</div>
 
     <div class="buttons">
       <button @click="storeCounter.decreaseCount"> - </button>
@@ -34,7 +34,7 @@ import Counter from '@/components/Counter.vue'
 
 const storeCounter = useCounterStore()
 
-const multipleCount = computed(() => {
+const doubleCount = computed(() => {
   return storeCounter.count*2;
 })
 
